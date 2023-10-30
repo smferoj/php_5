@@ -1,18 +1,9 @@
+
 <?php
 session_start();
 
-if(!isset($_SESSION["email"])){
-       header("Location:login.php");
-}
-
-if($_SESSION["role"] == "user"){
-    header("Location: home_user.php");
-}
-elseif($_SESSION["role"] == "admin"){
-    header("Location: home_admin.php");
-}
-
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +14,12 @@ elseif($_SESSION["role"] == "admin"){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="text-primary" > Welcome</h1>
+    <h1 class="text-primary" > Welcome In Home admin</h1>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
 
-<h1> Welcome! <?php echo $_SESSION["email"]; ?> </h1>
-<h1> Role: <?php echo $_SESSION["role"]; ?> </h1>
+<h1> Welcome! <?php echo $_SESSION["email"] ?> </h1>
+<h2> Role: <?php echo $_SESSION["role"]; ?></h2>
 <a href="logout.php">Logout</a>
 </body>
 

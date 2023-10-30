@@ -12,6 +12,7 @@ $passwords = array();
 
 while ($line = fgets($fp)) {
     $values = explode(",", $line);
+    
     array_push($roles, trim($values[0]));
     array_push($emails, trim($values[1]));
     array_push($passwords, trim($values[2]));
